@@ -10,7 +10,7 @@
     "install:frontend": "cd frontend && npm install",
     "install:root": " npm install",
 
-    "postinstall": "npm run install:*"
+    "postinstall": "(npm install) && (cd frontend && npm install)"
 
   },
   "author": "Jigar Sable",
