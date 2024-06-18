@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend",
+    "install:frontend": "cd frontend && npm install",
+    "install:root": " npm install",
+
+    "postinstall": "run-p install:*"
+
   },
   "author": "Jigar Sable",
   "license": "ISC",
